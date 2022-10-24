@@ -1,0 +1,280 @@
+:root {
+       
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    --clr-neutral: #6ff7e0;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+    
+    --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+          0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--clr-dark);
+    color: #fff;
+    font-family: 'Nunito', sans-serif;
+}
+
+body::before {
+    display: block;
+    content: '';
+    height: 100px;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.text-accent {
+    color: var(--clr-accent);
+}
+
+
+.title {
+    font-weight: 500;
+    font-size: 1.5rem
+}
+
+.nav-item {
+    color: var(--clr-accent);
+}
+
+.section1 {
+    height: 40vh;
+}
+
+.section2 {
+    height: 20vh;
+}
+
+.movie-image {
+    border: 3px solid var(--clr-accent);
+    width: 100px;
+    height: 100px;
+    border-radius: 30px; 
+    
+}
+
+.movie-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 30px;
+    animation: moveInUp;
+    animation-duration: 1s;
+    margin-bottom: 1em;
+}
+
+@keyframes moveInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.input-group {
+    margin: 0 auto;
+}
+
+.player-input {
+    width: 60%;
+    
+}
+
+.film-display {
+    padding: 0 3em;
+    
+}
+
+.correct {
+    text-align: center;
+    margin: 1.5rem auto;
+    color: var(--clr-accent);
+    
+}
+.correct h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+.time-score-big {
+    display: none;
+    /* color: var(--clr-accent); */
+}
+
+.time-target {
+    color: goldenrod;
+    margin-bottom: 0.5em;
+}
+
+.time-score {
+    margin-bottom: 1.5em;
+}
+
+.get-films-btn {
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0.5em 2em;
+    margin-bottom: 0.75em;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.get-films-btn:hover,
+.get-films-btn:focus {
+    background: var(--clr-neutral);
+    color: var(--clr-dark);
+    
+}
+
+.get-films-btn .loading {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 5px solid rgba(0,0,0, 0.2);
+    border-right-color: rgb(245, 239, 239);
+    animation: loading-wheel 2s linear infinite;
+}
+
+.get-films-btn h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.get-films-btn .loading * {
+    display: none;
+}
+
+.guess-btn {
+    background: var(--clr-dark);
+    color: var(--clr-accent);
+    border-color: var(--clr-accent);
+}
+
+/* loading button
+
+.loading-btn {
+    background: var(--clr-accent);
+    color: var(--clr-dark);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1em 2.5em;
+    margin-bottom: 0.75em;
+    border-radius: 25px;
+    transition: transform 200ms ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-btn:hover,
+.loading-btn:focus {
+    background: var(--clr-neutral);
+    color: var(--clr-dark);
+    transform: scale(1.1);
+}
+
+.loading-btn .loading {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 5px solid rgba(0,0,0, 0.2);
+    border-right-color: rgb(245, 239, 239);
+    animation: loading-wheel 2s linear infinite;
+}
+
+
+.loading h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.loading-btn .loading * {
+    display: none;
+} */
+
+@keyframes loading-wheel {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+@media(min-width: 568px) {
+
+   .movie-image {
+    width: 250px;
+    height: 250px;
+    }
+
+    header {
+        /* height: 10vh; */
+        padding: 2.5em;
+    }
+
+    .section1 {
+        height: 40vh;
+        margin-bottom: 2em;
+    }
+
+    .film-display {
+        padding: 0 4em;
+    }
+
+    .get-films-btn {
+        font-size: 1.5rem;
+        padding: 1em 2.25em;
+    }
+
+    .movie-info {
+        font-size: 0.9rem;
+        font-weight: 300;
+    }
+}
+
+@media (min-width:675px) {
+
+    .time-score {
+        display: none; 
+    }
+
+    .time-score-big {
+        display: block;
+        font-size: 1.5rem;
+    }
+}
+
+
+

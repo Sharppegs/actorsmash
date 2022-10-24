@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+            rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+            crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="actor.css">
+    <title>Actor Smash</title>
+</head>
+<body>
+     <nav class="navbar navbar-expand-lg bg-dark navbar-dark text-accent py-3 fixed-top">
+            <div class="container">
+                <h1 class="title">Who's Been In Both?</h1>
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navmenu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navmenu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a href="#learn" class="nav-link">How to Play</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#questions" class="nav-link">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    
+
+    <main>
+        <div class="container">
+            <section class="section1">
+                <div class="row film-display" id="film-display">
+                    <div class="d-flex align-items-center justify-content-between p-1">
+                        <div class="movie-image mb-4 col-4" id="movie-one-image"></div>
+                        <div class="time-score-big text-center">
+                            <p class="time-target">Time: 1:00</p>
+                            <p class="time-target">Score: 0</p>
+                        </div>
+                        <div class="movie-image mb-4 col-4" id="movie-two-image"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section2">
+                <div class="time-score text-center">
+                    <p class="time-target">Time: 1:00</p>
+                    <p class="time-target">Score: 0</p>
+                </div>
+
+                <div class="container text-center d-flex justify-content-center align-items-center mb-3">
+                    <button class="get-films-btn" id="get-films-btn">
+                        <div>
+                            <h3>Get Films >></h3>
+                        </div>
+                    </button>
+                    
+                </div>
+
+                <div class="input-group justify-content-center">
+                    <input id="player-input" type="text" class="player-input" placeholder="Which actor?" aria-label="Which actor" aria-describedby="button-addon2">
+                    <button class="btn-lg guess-btn" type="button" id="guess-btn">Guess!</button>
+                </div>
+            
+                <h1 id="actor-display-name" class="d-none">Hello</h1>
+            </div>
+        </section>
+            
+    </main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+
+<script src="actor.js" type="module"></script>
+</body>
+</html>
