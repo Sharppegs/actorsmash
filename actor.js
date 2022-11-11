@@ -45,7 +45,7 @@ function getActor() {
     const actorSurname = actors[actorFullName].surname
     actorCombinedName = actorName + " " + actorSurname
     actorsUsed.push(actorCombinedName)
-    console.log(actorsUsed)
+    
     // playerGuesses(actorsUsed)
     document.getElementById('actor-display-name').textContent = `${actorName} ${actorSurname}`
     fetchActorProfile(actorName, actorSurname)
@@ -96,13 +96,13 @@ function fetchActorProfile(name, surname) {
             // console.log(data)     
             let movieList = data[1].filter((film) => film.role).map(film => {
                 return [film.title, film.year]})
-            console.log(movieList)
+            
             renderFilms(movieList)
             
         })
 	        .catch((err => {
                 console.log(err)
-                getFilmsBtn.textContent="Error, Try Again >>"}));
+                location.reload()}));
  }
 
  function renderFilms(movie) {
@@ -150,7 +150,7 @@ function sortAnswer(correctActor) {
     element.addEventListener("click", (e) => {
       const targetData = e.target.textContent
       if(targetData === latestCorrectActor) {
-        console.log(targetData)
+        
         correctAnswer(targetData)
     } else {
         incorrectAnswer(latestCorrectActor)
@@ -186,7 +186,7 @@ function sortAnswer(correctActor) {
 // }
 
 function correctAnswer(actor) {
-    console.log("Correct")
+    
     filmDisplay.innerHTML = `
                    <h1>Correct!</h1>
                    <h3>It was ${actor} `
@@ -195,7 +195,7 @@ function correctAnswer(actor) {
 }
 
 function incorrectAnswer(actor) {
-    console.log("Incorrect")
+    
     filmDisplay.innerHTML = `
                    <h1>Sorry!</h1>
                    <h3>It was ${actor} `
