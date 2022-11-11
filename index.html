@@ -41,9 +41,18 @@
 
     <main>
         <div class="container">
+            <section class="container text-center d-flex justify-content-center align-items-center mb-1">
+                <button class="get-films-btn" id="get-films-btn">
+                    <div>
+                        <h3></h3>
+                    </div>
+                </button>
+                
+            </section>
+
             <section class="section1">
                 <div class="row film-display" id="film-display">
-                    <div class="d-flex align-items-center justify-content-between p-1">
+                    <div class="play-screen d-flex align-items-center justify-content-between p-1">
                         <div class="movie-image mb-4 col-4" id="movie-one-image"></div>
                         <div class="time-score-big text-center">
                             <p class="time-target">Time: 1:00</p>
@@ -52,27 +61,32 @@
                         <div class="movie-image mb-4 col-4" id="movie-two-image"></div>
                     </div>
                 </div>
+
+                
             </section>
 
             <section class="section2">
+                
+                    <div>
+                        <div id="option-btns" class="four-actors justify-content-center">
+                            <button id="actor-option-btn-1" class="option-btn">Hello</button>
+                            <button id="actor-option-btn-2" class="option-btn">Phil</button>
+                            <button id="actor-option-btn-3" class="option-btn">You</button>
+                            <button id="actor-option-btn-4" class="option-btn">Twat</button>
+                        </div>
+                    </div>
+               
+
                 <div class="time-score text-center">
                     <p class="time-target">Time: 1:00</p>
                     <p class="time-target">Score: 0</p>
                 </div>
 
-                <div class="container text-center d-flex justify-content-center align-items-center mb-3">
-                    <button class="get-films-btn" id="get-films-btn">
-                        <div>
-                            <h3>Get Films >></h3>
-                        </div>
-                    </button>
-                    
-                </div>
+                
 
-                <div class="input-group justify-content-center">
-                    <input id="player-input" type="text" class="player-input" placeholder="Which actor?" aria-label="Which actor" aria-describedby="button-addon2">
-                    <button class="btn-lg guess-btn" type="button" id="guess-btn">Guess!</button>
-                </div>
+               
+
+                
             
                 <h1 id="actor-display-name" class="d-none">Hello</h1>
             </div>
