@@ -21,7 +21,6 @@ const actors = [
     {name: "Johnny", surname: "Depp", fullName: "Johnny Depp"},
     {name: "Keanu", surname: "Reeves", fullName: "Keanu Reeves"},
     {name: "Robert", surname: "De Niro", fullName: "Robert De Niro"},
-    {name: "Reece", surname: "Witherspoon", fullName: "Reece Witherspoon"},
     {name: "Jennifer", surname: "Lawrence", fullName: "Jennifer Lawrence"},
     {name: "Will", surname: "Smith", fullName: "Will Smith"},
     {name: "Bill", surname: "Paxton", fullName: "Bill Paxton"},
