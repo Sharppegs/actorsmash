@@ -111,7 +111,12 @@ function fetchActorProfile(name, surname) {
     const movieOne = movie[getMovieOne]
     const movieTwo = movie[getMovieTwo]
     // loadingText.classList.toggle('loading')
+    if(movieOne && movieTwo) {
+        console.log(movieOne, movieTwo)
     displayMovies(movieOne, movieTwo)
+    } else {
+        getActor()
+    }
  }
 
 
