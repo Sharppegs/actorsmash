@@ -14,8 +14,14 @@ const actorBtn2 = document.getElementById("actor-option-btn-2")
 const actorBtn3 = document.getElementById("actor-option-btn-3")
 const actorBtn4 = document.getElementById("actor-option-btn-4")
 const filmDisplay = document.querySelector(".film-display")
+const scoreDisplay = document.getElementById("score-display")
+const scoreFromLocalStorage = localStorage.getItem("playerScore")
+let score = 0
 
-
+if (scoreFromLocalStorage) {
+    score = scoreFromLocalStorage
+    console.log(score)
+}
 
 
 const options = {
@@ -34,7 +40,7 @@ let actorsUsed = []
 
 
 function getActor() {
-    
+    scoreDisplay.textContent = `Score: ${score}`
     loadingText.textContent = ""
     loadingText.classList.toggle('loading')
     // playerInput.value = ""
@@ -59,6 +65,7 @@ let actorChoices = []
 
 
 function presentOptions(actor) {
+   
     const randomActor = [getRandomNumber(), getRandomNumber(), getRandomNumber()]
 
     actorChoices = 
@@ -191,7 +198,8 @@ function correctAnswer(actor) {
                    <h1>Correct!</h1>
                    <h3>It was ${actor} `
     setTimeout(() => location.reload(), 2000)
-    
+    score ++
+    localStorage.setItem('playerScore', score)
 }
 
 function incorrectAnswer(actor) {
@@ -200,6 +208,7 @@ function incorrectAnswer(actor) {
                    <h1>Sorry!</h1>
                    <h3>It was ${actor} `
     setTimeout(() => location.reload(), 2000)
+    
 }
 
 
