@@ -109,7 +109,7 @@ function fetchActorProfile(name, surname) {
         })
 	        .catch((err => {
                 console.log(err)
-                location.reload()}));
+            }));
  }
 
  function renderFilms(movie) {
